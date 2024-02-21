@@ -9,5 +9,5 @@ const a = input[1]
 const b = input[2]
 
 console.log(c)
-console.log(Math.round(a*100)/100)
-console.log(Math.round(b*100)/100)
+console.log((Math.round(a*100)/100).toFixed(2))
+console.log((Math.round(b*100)/100).toFixed(2))
