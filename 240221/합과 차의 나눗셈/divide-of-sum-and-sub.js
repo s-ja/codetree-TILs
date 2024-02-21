@@ -10,4 +10,4 @@ const minus = a - b
 
 const result = Math.round((plus/minus)*100)/100
 
-console.log(result)
+console.log(result.toFixed(2))
