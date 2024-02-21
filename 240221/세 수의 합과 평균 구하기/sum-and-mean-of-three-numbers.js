@@ -7,4 +7,4 @@ const b = Number(input[1])
 const c = Number(input[2])
 
 console.log(a+b+c)
-console.log(((a+b+c)/3).toFixed())
+console.log(Math.floor((a+b+c)/3))
