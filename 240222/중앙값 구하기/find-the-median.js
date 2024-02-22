@@ -7,14 +7,14 @@ input.forEach((i)=>{
     arr.push(Number(i))
 })
 
-let result = []
+let result = [] // -20 0 
 
 
 for(let i = 0; i<arr.length; i++){
     if(arr[i+1]===undefined){
         break
     }
-    if(!result[i]){
+    if(!result[0]){
         result.push(arr[i])
     }
 
