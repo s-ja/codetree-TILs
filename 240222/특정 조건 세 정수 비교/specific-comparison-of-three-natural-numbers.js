@@ -5,7 +5,7 @@ const [a,b,c] = input
 
 let [d,e] = [0,0]
 
-if(a<b && a<c){
+if(a<=b && a<=c){
     d=1
 }else{
     d=0
