@@ -13,11 +13,11 @@ for(let i = 0; i<arr.length; i++){
     if(arr[i+1]===undefined){
         break
     }
-if(arr[i]<arr[i+1]){
-    result.push(arr[i+1])
-}else{
-    result.unshift(arr[i+1])
-}
+    if(result[i]<arr[i+1]){
+        result.push(arr[i+1])
+    }else{
+        result.unshift(arr[i+1])
+    }
 }
 
 console.log(result[1])
