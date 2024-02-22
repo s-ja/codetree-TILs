@@ -7,14 +7,15 @@ const c = Number(input[2])
 const arr = [a,b,c]
 // console.log(Math.max(a,b,c))
 
-let result = 0
+let result = null
 for(let i=0; i<arr.length; i++){
+    if(!result){
+        result = arr[i]
+    }
     if(arr[i+1]===undefined){
         break
     }
-    if(arr[i]>arr[i+1]){
-        result = arr[i]
-    }else{
+    if(result < arr[i+1]){
         result = arr[i+1]
     }
 }
