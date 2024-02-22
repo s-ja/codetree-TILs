@@ -1,7 +1,10 @@
 const fs = require("fs");
-let input = fs.readFileSync("/dev/stdin").toString().trim().split(" ");
+let input = fs.readFileSync(0).toString().trim().split(" ");
 
-const [a,b,c] = input
+// const [a,b,c] = input
+const a = Number(input[0])
+const b = Number(input[1])
+const c = Number(input[2])
 
 let [d,e] = [0,0]
 
