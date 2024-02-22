@@ -14,7 +14,7 @@ input.forEach((i)=>{
 
 arr.forEach((i)=>{
     if(i[0]==='Y'){
-        if(i[1]>37){
+        if(i[1]>=37){
             stack += 1
         }
     }
