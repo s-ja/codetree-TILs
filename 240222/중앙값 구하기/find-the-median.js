@@ -7,15 +7,18 @@ input.forEach((i)=>{
     arr.push(Number(i))
 })
 
-// let result = []
+let result = []
 
-let result = [arr[0]]
 
 for(let i = 0; i<arr.length; i++){
     if(arr[i+1]===undefined){
         break
     }
-    if(result[i]<arr[i+1]){
+    if(!result[i]){
+        result.push(arr[i])
+    }
+
+    if(arr[i]<arr[i+1]){
         result.push(arr[i+1])
     }else{
         result.unshift(arr[i+1])
