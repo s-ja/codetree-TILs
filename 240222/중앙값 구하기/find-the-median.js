@@ -7,37 +7,15 @@ input.forEach((i)=>{
     arr.push(Number(i))
 })
 
-let result = [] // -20 0 
+// console.log(arr)
+const [a,b,c] = arr
 
-
-for(let i = 0; i<arr.length; i++){
-    if(arr[i+1]===undefined){
-        break
-    }
-    if(!result[0]){
-        result.push(arr[i])
-    }
-
-    if(arr[i]<arr[i+1]){
-        result.push(arr[i+1])
-    }else{
-        result.unshift(arr[i+1])
-    }
-}
-
-console.log(result[1])
-
-// if(arr[0]<arr[1]){
-//     if(arr[0]<arr[2]){
-//         result.push(arr[0])
-//     }else if(arr[1]<arr[2]){
-//         result.push(arr[1])
-//     }else{
-//         result.push(arr[2])
-//     }
-// }else{
-    
-// }
-
-
-// console.log(result[1])
+if ((a > b && a < c) || (a > c && a < b)) {
+    console.log(a);
+  }
+  else if ((b > a && b < c) || (b > c && b < a)) {
+    console.log(b);
+  }
+  else {
+    console.log(c);
+  }
