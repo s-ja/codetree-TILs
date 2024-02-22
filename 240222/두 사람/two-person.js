@@ -19,15 +19,25 @@ c = Number(c)
 //     console.log(0)
 //     }
 
-if(a>=19){
-    if(b === 'M'){
+// if(a>=19 || c>=19){
+//     if(b === 'M' || d === 'M'){
+//         console.log(1)
+//     }else if(c >= 19){
+//         if(d === 'M'){
+//             console.log(1)
+//         }else{
+//             console.log(0)
+//         }
+//     }else{
+//         console.log(0)
+//     }
+// }else{
+//     console.log(0)
+// }
+
+if(a>=19 || c>=19){
+    if(b==='M' || d==='M'){
         console.log(1)
-    }else if(c >= 19){
-        if(d === 'M'){
-            console.log(1)
-        }else{
-            console.log(0)
-        }
     }else{
         console.log(0)
     }
