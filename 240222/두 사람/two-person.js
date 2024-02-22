@@ -1,8 +1,11 @@
 const fs = require("fs");
 let input = fs.readFileSync(0).toString().trim().split("\n");
 
-const [a,b] = input[0].split(' ')
-const [c,d] = input[1].split(' ')
+let [a,b] = input[0].split(' ')
+let [c,d] = input[1].split(' ')
+
+a = Number(a)
+c = Number(c)
 
 // console.log(a,b,c,d)
 
