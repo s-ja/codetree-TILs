@@ -27,8 +27,9 @@ if(result[0]==0){
     let final = result.slice(1,21)
     result = "0." + final
 }else{
-    let final = result.slice(1,20)
-    result = "1." + final
+    let final_first = result.slice(0,1)
+    let final = result.slice(1,21)
+    result = final_first+ "." + final
 }
 
 console.log(result)
