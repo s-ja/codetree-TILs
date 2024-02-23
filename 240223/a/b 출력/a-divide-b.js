@@ -13,7 +13,7 @@ const b = Number(input[1])
 let result = ""
 for(let i=1; i<=20; i++){
     if(b>a){
-        result = "0."
+        result += "0"
         a = a * 10
         result += Math.floor(a/b)
         a = (a%b)*10
@@ -23,5 +23,9 @@ for(let i=1; i<=20; i++){
     }
 }
 // result = Number(result) / 10**20
+if(result[0]==0){
+    let final = result.slice(1,21)
+    result = "0." + final
+}
 
 console.log(result)
