@@ -11,7 +11,7 @@ const b = Number(input[1])
 // }
 
 let result = ""
-for(let i=1; i<=20; i++){
+for(let i=1; i<=21; i++){
     if(b>a){
         result += "0"
         a = a * 10
