@@ -26,6 +26,9 @@ for(let i=1; i<=20; i++){
 if(result[0]==0){
     let final = result.slice(1,21)
     result = "0." + final
+}else{
+    let final = result.slice(1,21)
+    result = "1." + final
 }
 
 console.log(result)
