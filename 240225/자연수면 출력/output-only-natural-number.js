@@ -6,7 +6,7 @@ const b = Number(input[1])
 
 let result = ""
 
-if(a>=0){
+if(a>0){
     for(let i = 0; i < b; i++){
         result += a
     }
