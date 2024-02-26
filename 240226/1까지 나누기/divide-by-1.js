@@ -8,10 +8,11 @@ let b = 1;
 let count = 0
 
 while(a >= 1){
+    if(a <= 1){
+        break
+    }
     a = Math.floor(a / b)
-    // console.log(a)
     count++
-    // console.log(count)
     b++
 }
 
