@@ -9,7 +9,7 @@ const n = Number(input)
 //     console.log("C")
 // }
 
-if(n === 2 || n / 2 > 0 || n / 3 > 0){
+if(n === 2 || n / 2 < 0 || n / 3 < 0){
     console.log("N")
 }else{
     console.log("C")
