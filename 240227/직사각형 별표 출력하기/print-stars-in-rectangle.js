@@ -4,7 +4,7 @@ const input = fs.readFileSync(0).toString().trim().split(" ");
 const n = Number(input[0])
 const m = Number(input[1])
 
-let str = ""
+// let str = ""
 
 for(let i = 0; i < n; i++){
     let str = ""
