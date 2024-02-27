@@ -1,13 +1,18 @@
 const fs = require("fs");
-let input = fs.readFileSync(0).toString().trim();
+const input = fs.readFileSync(0).toString().trim();
 
-let n = Number(input)
+let n = Number(input);
+let result = false;
 
-if(n === 2 || (n % 2 === 1 && n % 3 === 1)){
-    console.log("N")
-}else{
-    console.log("C")
+for(let i = 2; i < n; i++){
+    if(n % i === 0){
+        result = true
+    }
 }
 
-// console.log(n % 2)
-// console.log(n % 3)
+if (result === true) {
+    console.log("C");
+}
+else {
+    console.log("N");
+}
