@@ -11,12 +11,12 @@ for(let i = 0; i < n; i++){
     }
     console.log(str)
 }
-for(let i = 1; i < n; i++){
+for(let i = n; i > 1; i--){
     let str = ""
-    for(let j = 0; j < i; j++){
+    for(let j = 0; j < n - i + 1; j++){
         str += " ";
     }
-    for(let j = 0; j < n - (i * 2) + 2; j++){
+    for(let j = 0; j < (i - 1) * 2 - 1; j++){
         str += "*";
     }
     console.log(str)
