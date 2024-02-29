@@ -8,8 +8,8 @@ for(let i = 0; i < n; i++){
     for(let j = 0; j <= i; j++){
         str += String.fromCharCode(charCode)
         charCode++
-        if(charCode > Z.charCodeAt()){
-            charCode = A.charCodeAt()
+        if(charCode > "Z".charCodeAt()){
+            charCode = "A".charCodeAt()
         }
     }
     console.log(str)
