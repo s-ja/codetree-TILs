@@ -13,4 +13,4 @@ for(a of input){
     }
 }
 
-console.log(tmp, tmp/cnt.toFixed(1))
+console.log(tmp, (tmp/cnt).toFixed(1))
