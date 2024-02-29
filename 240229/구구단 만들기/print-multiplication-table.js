@@ -12,7 +12,7 @@ for(let i = 1; i < 10; i++){
     let str = ""
     for(let j = a; j >= b; j-=2){
         str += `${j} * ${i} = ${i*j}`
-        if(j > 2){
+        if(j > 2 && a !== b){
             str += " / "
         }
     }
