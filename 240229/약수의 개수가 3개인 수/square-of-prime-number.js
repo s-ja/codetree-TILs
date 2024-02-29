@@ -7,12 +7,15 @@ const b = Number(input[1])
 let result = 0
 
 for(let i = a; i <= b; i++){
+    // let cnt = ""
     let cnt = 0
-    for(let j = 1; j < i; j++){
+    for(let j = 1; j <= i; j++){
         if(i % j === 0){
+            // cnt += j + " "
             cnt++
         }
     }
+    // console.log(cnt)
     if(cnt === 3){
         result++
     }
