@@ -16,11 +16,13 @@ for(let i = 2; i < q + 2; i++){
     if(tmp[0] === 1){
         console.log(atom[tmp[1] - 1])
     }else if(tmp[0] === 2){
+        let idx = 0
         for(a of atom){
             if(a === tmp[1]){
-                console.log(atom.indexOf(tmp[1]) + 1)
+                idx = (atom.indexOf(tmp[1]) + 1)
             }
         }
+        console.log(idx)
     }else if(tmp[0] === 3){
         let str = "";
         for(let i = tmp[1] - 1; i < tmp[2]; i++){
