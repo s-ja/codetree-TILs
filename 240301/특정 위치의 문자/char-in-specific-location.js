@@ -12,3 +12,7 @@ for(a of arr){
         cnt++
     }
 }
+
+if(cnt >= arr.length){
+    console.log("None")
+}
