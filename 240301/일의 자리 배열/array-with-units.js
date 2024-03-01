@@ -12,7 +12,7 @@ for (let i = 2; i < arr.length; i++){
 
 // console.log(arr)
 for(a of arr){
-    if(a > 10){
+    if(a >= 10){
         let tmp = a.toString()
         str += tmp[tmp.length - 1] + " "
         // console.log(tmp[tmp.length - 1])
