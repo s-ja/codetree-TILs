@@ -9,7 +9,7 @@ for(let i = 1; i < input.length; i += 2){
     sum += Number(input[i])
 }
 
-for(let i = 2; i < input.length; i += 2){
+for(let i = 2; i < input.length; i += 3){
     avg += Number(input[i])
     cnt++
 }
