@@ -4,14 +4,18 @@ const input = fs.readFileSync(0).toString().trim().split("\n");
 const n = Number(input[0])
 const arr = input[1].split(" ").map(Number)
 
-let result = arr.shift()
+const counts = {};
 
-for(a of arr){
-    if(a === result){
-    result = -1
-    }else if(a > result){
-        result = a
+for (const number of arr) {
+    counts[number] = (counts[number] || 0) + 1;
+}
+
+let maxUnique = -1;
+
+for(const number in counts){
+    if(counts[number] === 1){
+        maxUnique = Math.max(maxUnique, number)
     }
 }
 
-console.log(result)
+console.log(maxUnique)
