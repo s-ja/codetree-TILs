@@ -8,12 +8,12 @@ const arr = input[1].split(" ").map(Number)
 // let result = [arr[0]]
 
 let first = arr[0]
-let second = 0
+let second = null
 
 for(let i = 1; i < n; i++){
     if(arr[i] > first){
         first = arr[i]
-    }else if(arr[i] > second){
+    }else if(!second ||arr[i] > second){
         second = arr[i]
     }
 }
