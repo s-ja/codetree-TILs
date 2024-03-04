@@ -6,7 +6,6 @@ const arr = input[1].split(" ").map(Number)
 
 const positions = []
 let searchEnd = arr.length
-let str = ""
 
 while(searchEnd > 0){
     let maxVal = -1
@@ -20,9 +19,5 @@ while(searchEnd > 0){
     positions.push(maxIndex + 1)
     searchEnd = maxIndex
 }
-
-// for(let j = positions.length; j > 0; j--){
-//     str += positions[j] + " "
-// }
 
 console.log(...positions)
