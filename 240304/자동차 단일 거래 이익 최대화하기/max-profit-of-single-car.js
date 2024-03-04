@@ -9,7 +9,7 @@ let result = [0];
 
 const cheap = Math.min(...arr)
 
-for(let i = arr.indexOf(cheap); i < n; i++){
+for(let i = arr.indexOf(cheap) + 1; i < n; i++){
     if(arr[i] > cheap){
         result.push(arr[i] - cheap)
     }
