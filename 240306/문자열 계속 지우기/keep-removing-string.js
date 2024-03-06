@@ -20,7 +20,7 @@ for(let i = 0; i < a.length; i++){
     if(tmp === b.join("")){
         // console.log("tmp 와 b가 일치할 때의 i : " + i)
         a.splice(i, b.length)
-        i = 0
+        i = -1
     }
     // console.log("사이클이 한번 돌고 난 후의 a : " + a)
 }
