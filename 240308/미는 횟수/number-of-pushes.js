@@ -15,8 +15,8 @@ for(let i = 0; i < b.length; i++){
     }
 }
 
-if(cnt > 0){
-    console.log(cnt)
-}else{
+if(cnt = b.length){
     console.log(-1)
+}else{
+    console.log(cnt)
 }
