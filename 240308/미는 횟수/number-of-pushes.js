@@ -15,7 +15,7 @@ for(let i = 0; i < b.length; i++){
     }
 }
 
-if(cnt = b.length){
+if(cnt === b.length){
     console.log(-1)
 }else{
     console.log(cnt)
