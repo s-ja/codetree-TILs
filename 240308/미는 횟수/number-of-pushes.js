@@ -6,16 +6,16 @@ const b = input[1]
 
 let cnt = 0
 
-for(let i = 0; i < b.length; i++){
-    if(a !== b){
-        a = a.slice(1) + a.slice(0, 1)
-        cnt++
-    }else if(a === b){
+for(let i = 0; i < a.length; i++){
+    if(a === b){
         break
+    }else{
+        a = a.slice(-1) + a.slice(0, a.length - 1)
+        cnt++
     }
 }
 
-if(cnt === b.length){
+if(cnt === a.length){
     console.log(-1)
 }else{
     console.log(cnt)
