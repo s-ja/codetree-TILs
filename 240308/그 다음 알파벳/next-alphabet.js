@@ -8,7 +8,7 @@ let charCode = input.charCodeAt(0)
 // console.log(charCode)
 // console.log("a".charCodeAt(0))
 
-if(charCode = 122){
+if(charCode === 122){
     charCode = 96
 }
 
