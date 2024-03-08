@@ -9,7 +9,7 @@ for(a of input){
 }
 
 for(a of str.split("")){
-    if((a >= "a" && a <= "z") || (a >= "1" && a <= "9")){
+    if((a >= "a" && a <= "z") || (a >= "0" && a <= "9")){
         result += a
     }
 }
