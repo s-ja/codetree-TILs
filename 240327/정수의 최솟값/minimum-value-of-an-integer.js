@@ -5,4 +5,4 @@ function print(a, b, c){
     return Math.min(a, b, c)
 }
 
-console.log(print(a, b, b));
+console.log(print(a, b, c));
