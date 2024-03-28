@@ -43,8 +43,9 @@ function result(input){
         }
     }
 
+    // return(cnt)
     // return result
-    if(cnt === B.length){
+    if(cnt > B.length){
         return "Yes"
     }else{
         return "No"
