@@ -8,20 +8,19 @@ const B = input[2].split(" ").map(Number)
 
 function isContinue(a, b){
     const bStart = b[0]
-    const aStart = a.indexOf(bStart)
+    const aStart = a.splice(a.indexOf(bStart))
+    // console.log(aStart)
     let result = true
     
-    if(aStart === -1){
-        return "No"
-    }
-
-    for(let i = aStart; i < b.length; i++){
-        if(a[i] === b[i]){
+    for(let i = 0; i < b.length; i++){
+        if(aStart[i] === b[i]){
             continue
         }else{
-            resut = false
+            result = false
+            break
         }
     }
+
     if(result){
         return "Yes"
     }else{
