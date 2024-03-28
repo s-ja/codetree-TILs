@@ -10,6 +10,11 @@ function isContinue(a, b){
     const bStart = b[0]
     const aStart = a.indexOf(bStart)
     let result = true
+    
+    if(aStart === -1){
+        return "No"
+    }
+
     for(let i = aStart; i < b.length; i++){
         if(a[i] === b[i]){
             continue
