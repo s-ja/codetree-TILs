@@ -43,7 +43,7 @@ function result(input){
     if(cnt === B.length){
         return "Yes"
     }else{
-        "No"
+        return "No"
     }
 }
 
