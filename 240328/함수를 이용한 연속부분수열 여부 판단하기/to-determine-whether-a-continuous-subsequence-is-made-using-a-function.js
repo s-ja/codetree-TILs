@@ -28,6 +28,7 @@ function result(input){
         result.push(tmp)
     }
     let cnt = 0
+    // console.log(result)
 
     for(elem of result){
         for(let i = 0; i < elem.length; i++){
@@ -36,6 +37,9 @@ function result(input){
             }else{
                 break
             }
+        }
+        if(cnt === B.length){
+            break
         }
     }
 
