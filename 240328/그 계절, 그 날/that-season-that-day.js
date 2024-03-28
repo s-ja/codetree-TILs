@@ -17,19 +17,19 @@ function isRightDate(year, month, date){
     
     if(isLeapYear(year)){
         if(month === 2){
-            if(date !== 29){
+            if(date > 29){
                 return false
             }else{
                 return true
             }
         } else if(thirtyOne.includes(month)){
-            if(date !== 31){
+            if(date > 31){
                 return false
             }else{
                 return true
             }
         }else{
-            if(date !== 30){
+            if(date > 30){
                 return false
             }else{
                 return true
@@ -37,19 +37,19 @@ function isRightDate(year, month, date){
         }
     }else{
         if(month === 2){
-            if(date !== 28){
+            if(date > 28){
                 return false
             }else{
                 return true
             }
         } else if(thirtyOne.includes(month)){
-            if(date !== 31){
+            if(date > 31){
                 return false
             }else{
                 return true
             }
         }else{
-            if(date !== 30){
+            if(date > 30){
                 return false
             }else{
                 return true
