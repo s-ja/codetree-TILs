@@ -27,25 +27,18 @@ function result(input){
 
         result.push(tmp)
     }
-    let cnt = 0
     // console.log(result)
 
+    let final = false
+
     for(elem of result){
-        for(let i = 0; i < elem.length; i++){
-            if(elem[i] === B[i]){
-                cnt++
-            }else{
-                break
-            }
-        }
-        if(cnt === B.length){
-            break
+        if(elem.length === B.length){
+            final = true
         }
     }
 
-    // return(cnt)
-    // return result
-    if(cnt > B.length){
+
+    if(final){
         return "Yes"
     }else{
         return "No"
