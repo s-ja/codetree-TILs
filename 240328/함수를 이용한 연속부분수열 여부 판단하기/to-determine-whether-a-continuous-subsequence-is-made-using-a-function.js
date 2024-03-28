@@ -18,7 +18,7 @@ function result(input){
         let tmp = false;
         for(let j = 0; j < n2; j++){
             if(A[i + j] !== B[j]){
-                result = false
+                // result = false
                 break
             }
             result = true;
