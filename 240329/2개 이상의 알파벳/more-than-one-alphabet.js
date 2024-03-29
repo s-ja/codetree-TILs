@@ -5,15 +5,14 @@ console.log(solution(input));
 
 function solution(str){
     const arr = str.split("")
-    let tmp = arr[0]
     let cnt = 0
-    for(elem of arr){
-        if(elem !== tmp){
+    for(let i = 0; i < arr.length - 1; i++){
+        if(arr[i] !== arr[i + 1]){
             cnt++
-            tmp = elem
         }
     }
-    if(cnt > 2){
+    
+    if(cnt >= 1){
         return "Yes"
     }else{
         return "No"
