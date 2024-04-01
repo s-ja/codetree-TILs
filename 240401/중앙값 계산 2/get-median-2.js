@@ -12,6 +12,6 @@ for(let i = 1; i <= n; i++){
 }
 
 function findCenter(arr){
-    arr.sort()
+    arr.sort((a, b) => a - b)
     return arr[parseInt(arr.length / 2)]
 }
