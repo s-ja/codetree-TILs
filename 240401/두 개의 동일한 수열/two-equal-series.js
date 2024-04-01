@@ -8,12 +8,10 @@ const arrB = input[2].split(" ").map(Number)
 arrA.sort((a,b) => a - b)
 arrB.sort((a,b) => a - b)
 
-let result = ""
+let result = "Yes"
 
 for(let i = 0; i < n; i++){
-    if(arrA[i] === arrB[i]){
-        result = "Yes"
-    }else{
+    if(arrA[i] !== arrB[i]){
         result = "No"
     }
 }
