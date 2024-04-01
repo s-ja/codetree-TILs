@@ -5,4 +5,4 @@ const [N, K] = input.shift().split(" ").map(Number)
 input = input[0].split(" ").map(Number)
 input.sort((a,b)=>a-b)
 
-console.log(input[K])
+console.log(input[K - 1])
