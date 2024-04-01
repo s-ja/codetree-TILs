@@ -5,18 +5,23 @@ let [n, k, t] = input.shift().split(" ")
 n = Number(n)
 k = Number(k)
 
-const arr = []
-
-for(elem of input){
-   arr.push(elem.replace('\b', ' '))
-}
-arr.sort()
+input.sort()
+const check = t.split("")
 
 const result = []
 
-for(elem of arr){
-    if(elem.includes(t)){
+for(elem of input){
+    const str = elem.split("")
+    let yes = true
+    for(let i = 0; i < check.length; i++){
+        if(str[i] !== check[i]){
+            yes = false
+        }
+    }
+    if(yes){
         result.push(elem)
+    }else{
+        continue
     }
 }
 
