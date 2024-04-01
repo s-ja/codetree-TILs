@@ -5,14 +5,20 @@ let [n, k, t] = input.shift().split(" ")
 n = Number(n)
 k = Number(k)
 
-input.sort()
+const arr = []
+
+for(elem of input){
+   arr.push(elem.replace('\b', ' '))
+}
+arr.sort()
 
 const result = []
 
-for(elem of input){
+for(elem of arr){
     if(elem.includes(t)){
         result.push(elem)
     }
 }
 
+// console.log(result)
 console.log(result[k - 1])
