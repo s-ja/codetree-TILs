@@ -34,4 +34,8 @@ elapsed2 += d1 + 1
 
 // console.log(elapsed1)
 // console.log(elapsed2)
-console.log(elapsed1 - elapsed2)
+if(elapsed1 - elapsed2 === 0){
+    console.log(1)
+}else{
+    console.log(elapsed1 - elapsed2)
+}
