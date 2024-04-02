@@ -34,18 +34,7 @@ for(let i = 1; i < m2; i++){
 
 elapsed2 += d2
 
-// console.log(elapsed1) // m1d1
-// console.log(elapsed2) // m2d2
-
 let diff = 0
 diff = elapsed2 - elapsed1
 
-// if(elapsed1 > elapsed2){
-//     diff = elapsed2 - elapsed1
-// }else{
-//     diff = elapsed1 - elapsed2
-// }
-
-// console.log(diff)
-// console.log(typeof diff % 7 , diff % 7)
-console.log(weekDay.at(diff % 7))
+console.log(weekDay[diff % 7])
