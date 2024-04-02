@@ -46,5 +46,6 @@ diff = elapsed2 - elapsed1
 //     diff = elapsed1 - elapsed2
 // }
 
-// console.log(diff % 7)
-console.log(weekDay.at(diff))
+// console.log(diff)
+// console.log(typeof diff % 7 , diff % 7)
+console.log(weekDay.at(diff % 7))
