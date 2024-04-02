@@ -35,7 +35,7 @@ users.sort(cmpName)
 
 console.log("name")
 for(elem of users){
-    console.log(elem.name, elem.height, elem.weight)
+    console.log(elem.name, elem.height, elem.weight.toFixed(1))
 }
 
 console.log()
@@ -44,5 +44,5 @@ users.sort(cmpHeight)
 
 console.log("height")
 for(elem of users){
-    console.log(elem.name, elem.height, elem.weight)
+    console.log(elem.name, elem.height, elem.weight.toFixed(1))
 }
