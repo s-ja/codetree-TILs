@@ -18,7 +18,7 @@ for(let i = 1; i < m2; i++){
     }
 }
 
-elapsed1 += d2 + 1
+elapsed1 += d2
 
 for(let i = 1; i < m1; i++){
     if(i === 2){
@@ -34,4 +34,4 @@ elapsed2 += d1
 
 // console.log(elapsed1)
 // console.log(elapsed2)
-console.log(elapsed1 - elapsed2)
+console.log(elapsed1 - elapsed2 + 1)
