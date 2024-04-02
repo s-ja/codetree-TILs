@@ -38,12 +38,13 @@ elapsed2 += d2
 // console.log(elapsed2) // m2d2
 
 let diff = 0
+diff = elapsed2 - elapsed1
 
-if(elapsed1 > elapsed2){
-    diff = elapsed2 - elapsed1
-}else{
-    diff = elapsed1 - elapsed2
-}
+// if(elapsed1 > elapsed2){
+//     diff = elapsed2 - elapsed1
+// }else{
+//     diff = elapsed1 - elapsed2
+// }
 
 // console.log(diff % 7)
 console.log(weekDay.at(diff))
