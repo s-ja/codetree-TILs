@@ -6,7 +6,7 @@ const [m1, d1, m2, d2] = input
 let elapsed1 = 0
 let elapsed2 = 0
 
-const thirtyone = [1, 3, 5, 7, 8, 9, 10, 12]
+const thirtyone = [1, 3, 5, 7, 8, 10, 12]
 
 for(let i = 1; i < m2; i++){
     if(i === 2){
@@ -30,8 +30,8 @@ for(let i = 1; i < m1; i++){
     }
 }
 
-elapsed2 += d1 + 1
+elapsed2 += d1
 
 // console.log(elapsed1)
 // console.log(elapsed2)
-console.log(elapsed1 - elapsed2 + 1)
+console.log(elapsed1 - elapsed2)
