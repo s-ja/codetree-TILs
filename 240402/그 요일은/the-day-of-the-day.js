@@ -12,9 +12,9 @@ function elapsed(m, d){
     let elapsedDay = 0
 
     for(let i = 1; i < m; i++){
-        if(m === 2){
+        if(i === 2){
             elapsedDay += 29
-        }else if(thirtyOne.includes(m)){
+        }else if(thirtyOne.includes(i)){
             elapsedDay += 31
         }else{
             elapsedDay += 30
@@ -26,14 +26,15 @@ function elapsed(m, d){
 }
 
 // console.log(elapsed(m1, d1), elapsed(m2, d2))
-const diff = elapsed(m2, d2) - elapsed(m1, d1)
+const diff = elapsed(m2, d2) - elapsed(m1, d1) + 1
 const index = week.indexOf(weekDay)
 // console.log(diff)
 // console.log(parseInt(diff / 7), diff % 7)
 // console.log(index)
 let cnt = 0
 
-for(let i = 1; i < diff; i++){
+for(let i = 0; i < diff; i++){
+    // console.log(i ,week[i % 7])
     if(i % 7 === index){
         cnt++
     }
