@@ -4,11 +4,21 @@ let input = fs.readFileSync("/dev/stdin").toString().trim().split("\n");
 const n = Number(input.shift())
 
 const arr = []
+let offset = 0
+// let last = 0
 
 for(elem of input){
     const [start, end] = elem.split(" ").map(Number)
-    // console.log(start, end)
-    for(let i = start; i < end; i++){
+    if(start < offset){
+        offset = start
+    }
+}
+
+offset = Math.abs(offset)
+
+for(elem of input){
+    const [start, end] = elem.split(" ").map(Number)
+    for(let i = start + offset; i < end + offset; i++){
         if(!arr[i]){
             arr[i] = 1
         }else{
@@ -18,3 +28,4 @@ for(elem of input){
 }
 
 console.log(Math.max(...arr))
+// console.log(arr)
