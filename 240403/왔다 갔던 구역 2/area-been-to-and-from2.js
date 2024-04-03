@@ -4,48 +4,52 @@ let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 // console.log(input)
 
 const n = Number(input.shift())
-const commands = []
-input.forEach((command) => {
-    const [leng, dir] = command.split(" ")
-    const length = Number(leng)
-    commands.push([length, dir])
-})
+
+const commands = input.map(command => {
+    const [distance, direction] = command.split(' ');
+    return [parseInt(distance, 10), direction];
+});
+
 // console.log(commands)
 
-const arr = Array(n * 10).fill(0)
-let pointer = (n * 10) / 2
-let acc = 0
 
-for(const command of commands){
-    if(acc < 1){
-        // console.log("before : " + pointer)
-        for(let i = 0; i < command[0]; i++){
-            if(command[1] === "L"){
+const arr = new Array(n * 10 * 2).fill(0);
+let pointer = n * 10
+
+for (let i = 0; i < commands.length; i++) {
+    if(i < 1){
+        // console.log("case0 : " + pointer)
+        for(let j = 0; j < commands[i][0]; j++){
+            arr[pointer]++
+            if(commands[i][1] === 'L'){
                 pointer--
             }else{
                 pointer++
             }
-            // console.log("pointer : " + pointer)
-            arr[pointer]++
-            // console.log(arr)
         }
-        // console.log(arr)
-        // console.log("after : " + pointer)
-        acc++
+        // console.log("case0 : " + arr)
+    }else if(i > 1 && commands[i - 1][1] === commands[i][1]){
+        // console.log("case1 : " + pointer)
+        for(let j = 0; j < commands[i][0]; j++){
+            if(commands[i][1] === 'L'){
+                pointer--
+            }else{
+                pointer++
+            }
+            arr[pointer]++
+        }
+        // console.log("case1 : " + arr)
     }else{
-        // console.log("before : " + pointer)
-        for(let i = 0; i < command[0]; i++){
+        // // console.log("case2 : " + pointer)
+        for(let j = 0; j < commands[i][0]; j++){
             arr[pointer]++
-            if(command[1] === "L"){
+            if(commands[i][1] === 'L'){
                 pointer--
             }else{
                 pointer++
             }
-            // console.log("pointer : " + pointer)
-            // console.log(arr)
         }
-        // console.log("after : " + pointer)
-        acc++
+        // console.log("case2 : " + arr)
     }
 }
 
