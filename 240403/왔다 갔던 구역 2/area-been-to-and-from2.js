@@ -1,63 +1,53 @@
 const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 
-// console.log(input)
+const OFFSET = 1000;
+const MAX_R = 2000;
 
-const n = Number(input.shift())
+// const n = Number(input.shift())
+const n = Number(input[0])
+const segments = []
 
-const commands = input.map(command => {
-    const [distance, direction] = command.split(' ');
-    return [parseInt(distance, 10), direction];
-});
+let cur = 0
 
-// console.log(commands)
+for(let i = 1; i <= n; i++){
+    let [distance, direction] = input[i].split(' ')
+    distance = Number(distance)
 
-
-const arr = new Array(n * 10 * 2).fill(0);
-let pointer = n * 10
-
-for (let i = 0; i < commands.length; i++) {
-    if(i < 1){
-        // console.log("case0 : " + pointer)
-        for(let j = 0; j < commands[i][0]; j++){
-            arr[pointer]++
-            if(commands[i][1] === 'L'){
-                pointer--
-            }else{
-                pointer++
-            }
-        }
-        // console.log("case0 : " + arr)
-    }else if(i > 1 && commands[i - 1][1] === commands[i][1]){
-        // console.log("case1 : " + pointer)
-        for(let j = 0; j < commands[i][0]; j++){
-            if(commands[i][1] === 'L'){
-                pointer--
-            }else{
-                pointer++
-            }
-            arr[pointer]++
-        }
-        // console.log("case1 : " + arr)
+    let sectionL, sectionR;
+    if(direction === 'L'){
+        sectionL = cur - distance
+        sectionR = cur
+        cur -= distance
     }else{
-        // // console.log("case2 : " + pointer)
-        for(let j = 0; j < commands[i][0]; j++){
-            arr[pointer]++
-            if(commands[i][1] === 'L'){
-                pointer--
-            }else{
-                pointer++
-            }
-        }
-        // console.log("case2 : " + arr)
+        sectionL = cur
+        sectionR = cur + distance
+        cur += distance
     }
+
+    segments.push([sectionL, sectionR])
 }
+
+// console.log(segments)
+
+const checked = Array(MAX_R + 1).fill(0)
+
+segments.forEach(segment => {
+    let [x1, x2] = segment
+
+    x1 += OFFSET
+    x2 += OFFSET
+
+    for(let i = x1; i < x2; i++){
+        checked[i] += 1;
+    }
+})
 
 let cnt = 0
 
-for(elem of arr){
-    if(elem > 1){
-        cnt++
+for(let elem of checked){
+    if(elem >= 2){
+        cnt += 1
     }
 }
 
