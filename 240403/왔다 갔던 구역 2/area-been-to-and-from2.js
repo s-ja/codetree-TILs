@@ -1,59 +1,35 @@
 const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 
+// console.log(input)
+
 const n = Number(input.shift())
 
-const positions = []
-let curr = 0
-
-for(elem of input){
-    const length = Number(elem.split(" ")[0])
-    const direction = elem.split(" ")[1]
-    if(direction === "L"){
-        curr -= length
-        positions.push(curr)
-    }else{
-        curr += length
-        positions.push(curr)
-    }
-}
-
-// console.log(positions)
-const offset = Math.abs(Math.min(...positions))
-// console.log(offset)
-
-const arr = []
-// console.log(arr)
-let pointer = offset
-
-for(elem of input){
-    const length = Number(elem.split(" ")[0])
-    const direction = elem.split(" ")[1]
-    if(direction === "R"){
-        for(let i = 0; i < length; i++){
-            pointer++
-            if(!arr[pointer]){
-                arr[pointer] = 1
-            }else{
-                arr[pointer]++
-            }
-            // console.log(pointer)
-        }
-    }else{
-        for(let i = 0; i< length; i++){
-            pointer--
-            if(!arr[pointer]){
-                arr[pointer] = 1
-            }else{
-                arr[pointer]++
-            }
-            // console.log(pointer)
-        }
-    }
-    // console.log(arr)
-}
-
+const arr = Array(n * 10).fill(0)
+let curr = (n * 10) / 2
+// console.log(arr.length, curr)
 let cnt = 0
+
+for(elem of input){
+    const [leng, dir] = elem.split(' ')
+    const length = Number(leng)
+    for(let i = 0; i < length; i++){
+        arr[curr]++
+        // console.log('command start : ' + arr)
+        // console.log('command start : ' + curr)
+
+        if(dir === "L"){
+            curr--
+            // console.log('curr : ' + curr)
+        }else{
+            curr++
+            // console.log('curr : ' + curr)
+        }
+        // console.log(curr)
+    }
+    // console.log("cut")
+    // console.log('command end : ' + arr)
+}
 
 for(elem of arr){
     if(elem > 1){
@@ -62,3 +38,4 @@ for(elem of arr){
 }
 
 console.log(cnt)
+// console.log(arr)
