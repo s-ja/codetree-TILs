@@ -1,8 +1,8 @@
 const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 
-const OFFSET = 10;
-const MAX_R = 20;
+const OFFSET = 1000
+const MAX_R = 2000;
 
 const matrix = Array.from({length : MAX_R + 1}, ()=>Array(MAX_R + 1).fill(0))
 
@@ -38,4 +38,4 @@ for(let i = 0; i < MAX_R; i++){
 const firstP = points[0]
 const lastP = points.at(-1)
 
-console.log((lastP[0]+1 - firstP[0]) * (lastP[1] + 1 - firstP[1]) )
+console.log((lastP[0]+1 - firstP[0]) * (lastP[1] + 1 - firstP[1]))
