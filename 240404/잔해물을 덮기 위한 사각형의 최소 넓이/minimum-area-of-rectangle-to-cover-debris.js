@@ -1,8 +1,8 @@
 const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 
-const OFFSET = 1000;
-const MAX_R = 2000;
+const OFFSET = 10;
+const MAX_R = 20;
 
 const matrix = Array.from({length : MAX_R + 1}, ()=>Array(MAX_R + 1).fill(0))
 
@@ -22,20 +22,20 @@ function paint(arr, num){
 paint(first, 1);
 paint(second, 2);
 
-const height = []
+const points = []
 
 for(let i = 0; i < MAX_R; i++){
-    let width = 0;
     for(let j = 0; j < MAX_R; j++){
         if(matrix[i][j] === 1){
-            width++
+            points.push([i, j])
         }   
-    }
-    if(width > 0){
-        height.push(width)
     }
 }
 
-// console.log(height)
+// console.log(points[0])
+// console.log(points.at(-1))
 
-console.log(height.length * Math.max(...height))
+const firstP = points[0]
+const lastP = points.at(-1)
+
+console.log((lastP[0]+1 - firstP[0]) * (lastP[1] + 1 - firstP[1]) )
