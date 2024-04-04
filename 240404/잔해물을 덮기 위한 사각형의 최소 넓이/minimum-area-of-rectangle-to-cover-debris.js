@@ -43,23 +43,21 @@ let maxY = 0;
 
 if(!points[0]){
     console.log(0)
-    break
-}
+}else{
+    for(elem of points){
+        if(elem[0] > maxX){
+            maxX = elem[0]
+        }
+        if(elem[0] < minX){
+            minX = elem[0]
+        }
+        if(elem[1] > maxY){
+            maxY = elem[1]
+        }
+        if(elem[1] < minY){
+            minY = elem[1]
+        }
+    }
 
-for(elem of points){
-    if(elem[0] > maxX){
-        maxX = elem[0]
-    }
-    if(elem[0] < minX){
-        minX = elem[0]
-    }
-    if(elem[1] > maxY){
-        maxY = elem[1]
-    }
-    if(elem[1] < minY){
-        minY = elem[1]
-    }
+    console.log(((maxX + 1) - minX) * ((maxY + 1) - minY))
 }
-
-// console.log(minX, minY, maxX, maxY)
-console.log(((maxX + 1) - minX) * ((maxY + 1) - minY))
