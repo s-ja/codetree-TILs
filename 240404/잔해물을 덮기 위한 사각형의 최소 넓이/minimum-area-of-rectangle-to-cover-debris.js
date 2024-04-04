@@ -2,7 +2,7 @@ const fs = require("fs");
 let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 
 const OFFSET = 1000
-const MAX_R = 2000;
+const MAX_R = 3000;
 
 const matrix = Array.from({length : MAX_R + 1}, ()=>Array(MAX_R + 1).fill(0))
 
@@ -32,6 +32,7 @@ for(let i = 0; i < MAX_R; i++){
     }
 }
 
+// console.log(points)
 // console.log(points[0])
 // console.log(points.at(-1))
 
