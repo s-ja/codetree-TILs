@@ -36,11 +36,25 @@ for(let i = 0; i < MAX_R; i++){
 // console.log(points[0])
 // console.log(points.at(-1))
 
-const firstP = points[0]
-const lastP = points.at(-1)
+let minX = points[0][0];
+let minY = points[0][1];
+let maxX = 0;
+let maxY = 0;
 
-if(!points[0]){
-    console.log(0)
-}else{
-    console.log((lastP[0]+1 - firstP[0]) * (lastP[1] + 1 - firstP[1]))
+for(elem of points){
+    if(elem[0] > maxX){
+        maxX = elem[0]
+    }
+    if(elem[0] < minX){
+        minX = elem[0]
+    }
+    if(elem[1] > maxY){
+        maxY = elem[1]
+    }
+    if(elem[1] < minY){
+        minY = elem[1]
+    }
 }
+
+// console.log(minX, minY, maxX, maxY)
+console.log(((maxX + 1) - minX) * ((maxY + 1) - minY))
