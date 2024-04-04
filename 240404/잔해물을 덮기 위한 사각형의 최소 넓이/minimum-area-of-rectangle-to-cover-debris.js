@@ -41,6 +41,11 @@ let minY = points[0][1];
 let maxX = 0;
 let maxY = 0;
 
+if(!points[0]){
+    console.log(0)
+    break
+}
+
 for(elem of points){
     if(elem[0] > maxX){
         maxX = elem[0]
