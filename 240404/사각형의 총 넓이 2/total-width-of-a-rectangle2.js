@@ -7,9 +7,9 @@ const maxN = 10;
 const maxPoint = 100 + offSet;
 const matrix = []
 
-for(let i = 0; i < maxN * maxPoint + 1; i++){
+for(let i = 0; i < maxPoint + 1; i++){
     const tmp = []
-    for(let i = 0; i < maxN * maxPoint + 1; i++){
+    for(let i = 0; i < maxPoint + 1; i++){
         tmp.push(0)
     }
     matrix.push(tmp)
