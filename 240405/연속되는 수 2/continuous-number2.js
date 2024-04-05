@@ -4,12 +4,18 @@ let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n').map(Numb
 const n = input.shift()
 
 // console.log(input)
-let cnt = 1;
+let maxCnt = 0;
+let currCnt = 1;
 
-for(let i = 0; i < n - 1; i++){
-    if(input[i] === input[i + 1]){
-        cnt++
+for(let i = 1; i < n; i++){
+    if(input[i] === input[i - 1]){
+        currCnt++;
+    }else{
+        maxCnt = Math.max(maxCnt, currCnt);
+        currCnt = 1;
     }
 }
 
-console.log(cnt)
+maxCnt = Math.max(maxCnt, currCnt);
+
+console.log(maxCnt)
