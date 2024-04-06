@@ -21,18 +21,22 @@ if(arr.length < 2){
         }
     }
 
-    let curr = 1;
-    let maxCnt = 0;
+    if(!continues.includes(2)){
+        console.log(0)
+    }else{
+        let curr = 1;
+        let maxCnt = 0;
 
-    // console.log(continues)
-    for(let i = 1; i < n; i++){
-        if(continues[i] === continues[i - 1]){
-            curr++;
-        }else{
-            curr = 1;
+        console.log(continues)
+        for(let i = 1; i < n; i++){
+            if(continues[i] === 2 && continues[i - 1] === 2){
+                curr++;
+            }else{
+                curr = 1;
+            }
+            maxCnt = Math.max(curr, maxCnt)
         }
-        maxCnt = Math.max(curr, maxCnt)
-    }
 
-    console.log(maxCnt)
+        console.log(maxCnt)
+    }
 }
