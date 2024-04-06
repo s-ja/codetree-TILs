@@ -3,7 +3,6 @@ let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n').map(Numb
 
 const n = input.shift()
 
-let curr = null;
 const continues = []
 
 for(elem of input){
@@ -14,18 +13,24 @@ for(elem of input){
     }
 }
 
-let maxCnt = 0;
-let currCnt = 1;
+// console.log(continues)
 
-for(let i = 1; i < n; i++){
-    if(continues[i] === continues[i - 1]){
-        currCnt++;
-    }else{
-        currCnt = 1;
+if(continues.length < 2){
+    console.log(1)
+}else{
+    let maxCnt = 0;
+    let currCnt = 1;
+
+    for(let i = 1; i < n; i++){
+        if(continues[i] === continues[i - 1]){
+            currCnt++;
+        }else{
+            currCnt = 1;
+        }
+
+        maxCnt = Math.max(maxCnt, currCnt);
     }
 
-    maxCnt = Math.max(maxCnt, currCnt);
+
+    console.log(maxCnt)
 }
-
-
-console.log(maxCnt)
