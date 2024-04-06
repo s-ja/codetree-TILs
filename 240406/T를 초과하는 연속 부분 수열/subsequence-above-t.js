@@ -27,7 +27,7 @@ if(arr.length < 2){
         let curr = 1;
         let maxCnt = 0;
 
-        console.log(continues)
+        // console.log(continues)
         for(let i = 1; i < n; i++){
             if(continues[i] === 2 && continues[i - 1] === 2){
                 curr++;
