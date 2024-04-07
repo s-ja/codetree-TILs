@@ -3,17 +3,17 @@ let input = fs.readFileSync("/dev/stdin").toString().trim().split('\n');
 
 const [N, M, K] = input.shift().split(' ').map(Number)
 
-const penalties = Array(N).fill(K)
+const penalties = Array(N).fill(0)
 const fine = []
 
-// console.log(penalties)
-
 for(let elem of input){
-    penalties[elem - 1]--
-    if(penalties[elem - 1] < 2){
+    penalties[elem - 1]++
+    if(penalties[elem - 1] >= K){
         fine.push(elem)
     }
 }
+// console.log(penalties)
+// console.log(fine)
 
 if(fine.length === 0){
     console.log(-1)
