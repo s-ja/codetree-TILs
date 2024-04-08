@@ -53,12 +53,20 @@ for(let elem of timeLine){
     const y = elem[2] - 1
     if(people[x].remain > 0){
         people[x].remain--
-        people[y].carrying = true
-        people[y].remain = K
+        if(people[y].carrying){
+            people[y].remain--
+        }else{
+            people[y].carrying = true
+            people[y].remain = K
+        }
     }else if(people[y].remain > 0){
         people[y].remain--
-        people[x].carrying = true
-        people[x].remain = K
+        if(people[x].carrying){
+            people[x].remain--
+        }else{
+            people[x].carrying = true
+            people[x].remain = K
+        }
     }
 }
 
