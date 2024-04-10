@@ -15,7 +15,7 @@ for(let i = 0; i < n; i++){
 // console.log(matrix)
 
 function inRange(x, y) {
-    return x >= 0 && x < n && y >= 0 && y < n;
+    return x >= 0 && x < n && y >= 0 && y < m;
 }
 const dx = [0, 1, 0, -1], dy = [1, 0, -1, 0];
 let x = 0, y = 0
